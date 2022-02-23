@@ -1,0 +1,56 @@
+Exercise 8:
+
+SELECT customer.cust_name,
+salesman.name, salesman.city
+FROM salesman, customer
+WHERE salesman.city = customer.city;
+
+Exercise 10:
+
+SELECT orders.ord_no, customer.cust_name
+FROM orders, customer
+WHERE orders.customer_id = customer.customer_id; 
+
+Exercise 13:
+
+SELECT * FROM departments 
+WHERE department_id 
+NOT IN (select department_id FROM employees);
+
+Exercise 14:
+
+SELECT first_name, last_name, salary FROM employees 
+WHERE salary > (SELECT AVG(salary) FROM employees);
+
+Exercise 15:
+
+SELECT first_name, last_name, salary FROM employees 
+WHERE employees.salary = (SELECT min_salary FROM jobs
+WHERE employees.job_id = jobs.job_id);
+
+Exercise 16:
+
+SELECT DISTINCT salary  FROM employees e1 
+WHERE 4 = (SELECT COUNT(DISTINCT salary) 
+FROM employees  e2 
+WHERE e2.salary <= e1.salary);
+
+Exercise 17:
+
+SELECT employee_id, first_name 
+FROM employees AS A 
+WHERE salary >  (SELECT AVG(salary) FROM employees 
+WHERE department_id = A.department_id);
+Exercise 18:
+SELECT COUNT(DISTINCT job_id) 
+FROM employees;
+
+Exercise 19:
+
+SELECT MIN(salary) 
+FROM employees;
+
+Exercise 20:
+
+SELECT SUM(salary) 
+FROM employees;
