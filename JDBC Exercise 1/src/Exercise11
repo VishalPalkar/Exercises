@@ -1,0 +1,12 @@
+Exercise 11:
+
+SELECT customer.cust_name AS "Customer",
+customer.grade AS "Grade",orders.ord_no AS "Order No."
+FROM orders, salesman, customer
+WHERE orders.customer_id = customer.customer_id
+AND orders.salesman_id = salesman.salesman_id
+AND salesman.city IS NOT NULL
+AND customer.grade IS NOT NULL;SELECT *
+FROM customer a,orders  b 
+WHERE a.customer_id=b.customer_id 
+AND b.ord_date='2012-10-05';

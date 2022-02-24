@@ -1,0 +1,5 @@
+Exercise 10:
+
+SELECT orders.ord_no, customer.cust_name
+FROM orders, customer
+WHERE orders.customer_id = customer.customer_id; 

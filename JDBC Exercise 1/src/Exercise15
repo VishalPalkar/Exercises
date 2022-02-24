@@ -1,0 +1,5 @@
+Exercise 15:
+
+SELECT first_name, last_name, salary FROM employees 
+WHERE employees.salary = (SELECT min_salary FROM jobs
+WHERE employees.job_id = jobs.job_id);

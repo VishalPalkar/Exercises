@@ -1,0 +1,4 @@
+Exercise 20:
+
+SELECT SUM(salary) 
+FROM employees;
